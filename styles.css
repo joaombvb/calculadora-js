@@ -1,0 +1,81 @@
+
+:root {
+    --fonte: Arial, sans-serif;
+    --cor-branca: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #222;
+    color: black;
+    font-family: var(--fonte);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 280px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.display {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    color: var(--cor-branca);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.container-botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #f90;
+}
+
+#igual:hover {
+    background-color: rgb(220, 132, 0);
+}
+
+#limpar {
+    background-color: #e74c3c;
+}
+
+#limpar:hover {
+    background-color: #d04636;
+}
+
+.botao {
+    box-sizing: border-box;
+    background-color: #666;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #555;
+}
