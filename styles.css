@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 :root {
-    --fonte: Arial, sans-serif;
+    --fonte: "Share Tech Mono", Arial, sans-serif;
     --cor-branca: #FFFFFF;
 }
 
@@ -12,7 +13,6 @@
 body {
     box-sizing: border-box;
     background-color: #222;
-    color: black;
     font-family: var(--fonte);
 }
 
@@ -37,7 +37,7 @@ main {
     border-radius: 8px;
     text-align: right;
     color: var(--cor-branca);
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -71,7 +71,7 @@ main {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    color: #fff;
+    color: var(--cor-branca);
     font-size: 20px;
     cursor: pointer;
 }
