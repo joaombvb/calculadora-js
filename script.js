@@ -6,7 +6,7 @@ let valorAnterior = 0;
 let resultado = 0;
 let operador = "";
 let operadorEmAndamento = false;
-const operadores = ['+', '-', 'x', '÷', '%'];
+const operadores = ['+', '-', 'x', '÷'];
 display.textContent = "0";
 
 botoes.forEach(botao => { 
@@ -49,6 +49,8 @@ function mostrarNumero() {
         operador = "";
     } else if (valor === "C") {
         limpar();
+    } else if (valor === "%") {
+        porcentagem();
     } else if (operadores.includes(valor)) {
         if (operador) {
             calcular();
@@ -82,19 +84,53 @@ function calcular() {
                 resultado = valorAnterior / valorAtual;
             }
             break;
-        case "%":
-            if (operador === "+" || operador === "-") {
-                resultado = valorAnterior * (valorAtual / 100);
-            } else if (operador === "x" || operador === "÷") {
-                resultado = valorAtual / 100;
-            }
-            break;
         case "":
             resultado = valorAtual;
             break;    
     }
     display.textContent = resultado;
     valorAnterior = resultado;
+}
+
+function porcentagem() {
+    let valorAtual = parseFloat(display.textContent);
+
+    if (isNaN(valorAtual) || valorAtual === 0) {
+        display.textContent = "0";
+        return;
+    }
+
+    if (valorAnterior !== 0) {
+        switch (operador) {
+            case "+":
+                resultado = valorAnterior + (valorAnterior * (valorAtual / 100));
+                break;
+            case "-":
+                resultado = valorAnterior - (valorAnterior * (valorAtual / 100));
+                break;
+            case "x":
+                resultado = valorAnterior * (valorAtual / 100);
+                break;
+            case "÷":
+                if (valorAtual === 0) {
+                    limpar();
+                    resultado = "ERROR";
+                } else {
+                    resultado = valorAnterior / (valorAtual / 100);
+                }
+                break;
+            default:
+                resultado = valorAtual / 100; // Se o usuário apenas pressionar '%' sem operador
+                break;
+        }
+    } else {
+        resultado = valorAtual / 100; // Caso não haja valor anterior, considera apenas a porcentagem do valor atual.
+    }
+
+    resultado = 
+    display.textContent = resultado;
+    valorAnterior = resultado;
+    operador = ""; // Reseta o operador após calcular a porcentagem
 }
 
 function limpar() {
