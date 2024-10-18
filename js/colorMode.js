@@ -1,4 +1,4 @@
-let lightMode = false;
+let lightMode = true;
 
 export function colorMode() {
     const elementos = document.querySelectorAll('.botao');
