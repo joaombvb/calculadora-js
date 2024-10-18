@@ -1,0 +1,39 @@
+.container-botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #f90;
+}
+
+#igual:hover {
+    background-color: #dc8400;
+}
+
+#limpar {
+    background-color: #e74c3c;
+}
+
+#limpar:hover {
+    background-color: #d04636;
+}
+
+.botao {
+    box-sizing: border-box;
+    background-color: #666;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    background-color: #555;
+}
