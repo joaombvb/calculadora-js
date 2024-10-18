@@ -8,7 +8,6 @@ export function colorMode() {
     // Dark mode    
     if (lightMode === false) { 
 
-        console.log('funciona1');
         lightMode = true;
         
         document.body.style.backgroundColor = '#222'; 
@@ -41,7 +40,6 @@ export function colorMode() {
     // Light mode
     } else {
 
-        console.log('funciona2');
         lightMode = false;
 
         document.body.style.backgroundColor = '#D8D2C2'; 
