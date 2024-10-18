@@ -3,12 +3,13 @@ let lightMode = false;
 export function colorMode() {
     const elementos = document.querySelectorAll('.botao');
     const icones = document.querySelectorAll('.icone');
+    const iconesLink = document.querySelectorAll('.link');
 
     // Dark mode    
-    if (lightMode === true) { 
+    if (lightMode === false) { 
 
         console.log('funciona1');
-        lightMode = false;
+        lightMode = true;
         
         document.body.style.backgroundColor = '#222'; 
         document.body.style.color = '#fff';
@@ -33,11 +34,15 @@ export function colorMode() {
         if (limpar) limpar.style.backgroundColor = '#e74c3c';
         if (igual) igual.style.backgroundColor = '#f90';
 
+        iconesLink.forEach(link => {
+            link.style.color = '#fff';
+        });
+
     // Light mode
     } else {
 
         console.log('funciona2');
-        lightMode = true;
+        lightMode = false;
 
         document.body.style.backgroundColor = '#D8D2C2'; 
         document.body.style.color = '#333';
@@ -61,5 +66,9 @@ export function colorMode() {
 
         if (limpar) limpar.style.backgroundColor = '#51829B';
         if (igual) igual.style.backgroundColor = '#F6995C';
+
+        iconesLink.forEach(link => {
+            link.style.color = '#333';
+        });
     }
 }
