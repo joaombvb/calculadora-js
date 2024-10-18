@@ -1,17 +1,22 @@
 import { calcular } from './js/calcular.js';
 import { porcentagem } from './js/porcentagem.js';
 import { limpar } from './js/limpar.js';
+import { colorMode } from './js/colorMode.js';
 
 let valor = 0;
-const botoes = document.querySelectorAll("button");
-const display = document.querySelector("p");
+const botoes = document.querySelectorAll(".botao");
+const display = document.querySelector(".display-txt");
 let valorNoDisplay = "";
 let valorAnterior = 0;
 let resultado = 0;
 let operador = "";
 let operadorEmAndamento = false;
 const operadores = ['+', '-', 'x', '÷'];
-display.textContent = "0";
+
+if (display) {
+    display.textContent = "0";
+}
+
 
 botoes.forEach(botao => { 
     botao.addEventListener("click", function() {
@@ -67,3 +72,7 @@ function mostrarNumero() {
         operadorEmAndamento = true;
     }
 }
+
+document.getElementById("color-mode").addEventListener("click", function () {
+    colorMode();
+});
