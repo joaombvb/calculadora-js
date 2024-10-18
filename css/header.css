@@ -10,11 +10,14 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 10px;
     margin-left: 5%;
 }
 
 .container-icones {
+    display: flex;
     margin-right: 5%;
+    gap:20px;
 }
 
 h1 {
@@ -42,7 +45,7 @@ h3 {
 
 .icone {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 20px;
     transition: transform 0.3s;
 }
@@ -53,7 +56,7 @@ h3 {
 
 
 @media (max-width: 768px) {
-    
+
     h1 {
         font-size: 2.5rem; 
      }
@@ -63,7 +66,7 @@ h3 {
      }
 
      .icone {
-        font-size: 1.5rem;
+        font-size: 2rem;
      }
 
 }
