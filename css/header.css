@@ -56,11 +56,12 @@ h3 {
 @media (max-width: 768px) {
 
     h1 {
-        font-size: 2rem; 
+        font-size: 2rem;
      }
      
      h3 {
          font-size: 0.3rem;
+         letter-spacing: 1px;
      }
 
      .icone {
