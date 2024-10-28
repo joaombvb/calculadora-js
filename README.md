@@ -38,7 +38,8 @@ Este é um projeto de uma calculadora desenvolvida em JavaScript, HTML e CSS, co
    ```bash
    cd calculadora-js
 
-3. Abra o arquivo `index.html` em seu navegador.
+3. Abra o arquivo `index.html` em seu navegador. Você também pode acessar a aplicação pelo [deploy](https://calculadora-joaombvb.vercel.app).
+
 
 ## Tecnologias Utilizadas
 
